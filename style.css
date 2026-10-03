@@ -933,6 +933,26 @@ transform: translateY(-50%);
     object-position: center;
 }
 }
-        
+        @media (max-width: 700px) {
+
+    .instagram {
+        position: fixed;
+        top: 25px;
+        right: 20px;
+    }
+
+    .youtube {
+        position: fixed !important;
+        top: 25px !important;
+        right: 65px !important;
+    }
+
+    .letterboxd {
+        position: fixed;
+        top: 31px;
+        right: 105px;
+    }
+
+}
     
     
