@@ -899,6 +899,12 @@ transform: translateY(-50%);
     .contact-text-box {
         height: 205px;
     }
+    .video-container video {
+    width: 90%;
+    height: 90%;
+    margin: 5% auto;
+    object-fit: contain;
+}
 }
         
     
