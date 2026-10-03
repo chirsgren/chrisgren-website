@@ -155,11 +155,12 @@ font-weight: 200;
 color: white;
 }
 .home-button {
-position: fixed;
-top: 28.5px;
-left: 70%;
-transform: translateX(-50%);
-z-index: 20;
+    position: absolute;
+    top: 28.5px;
+    left: auto;
+    right: 65px;
+    transform: none;
+    z-index: 20;
 }
 
 .home-button img {
@@ -857,6 +858,20 @@ transform: translateY(-50%);
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: start;
+}
+
+.bio-image {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin-top: 0;
+}
+
+.bio-text {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: none;
+    width: 100%;
 }
 
 .bio-text {
