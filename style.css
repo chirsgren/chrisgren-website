@@ -902,7 +902,7 @@ transform: translateY(-50%);
 .video-container video {
     width: 200%;
     height: 200%;
-    margin: -25% auto;
+    margin: -25% 0 0 -50%;
     object-fit: contain;
 }
 }
