@@ -900,8 +900,8 @@ transform: translateY(-50%);
         height: 205px;
     }
     .video-container video {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     margin: 5% auto;
     object-fit: contain;
 }
