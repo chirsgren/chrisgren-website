@@ -67,7 +67,7 @@ body {
 
 /* Works page */
 body.works-page {
-    background: #e2d3b5;
+    background: black;
     overflow-y: auto;
 }
 
@@ -137,14 +137,14 @@ grid-template-columns: minmax(0, 32vw) minmax(0, 1fr);    gap: 100px;
 
 .bio-text {
 max-width: 480px;
-color: black;
+color: white;
 }
 
 .bio-text h1 {
 margin: 0 0 30px;
 font-size: 42px;
 font-weight: 200;
-color: black;
+color: white;
 }
 
 .bio-text p {
@@ -152,7 +152,7 @@ margin: 0 0 24px;
 font-size: 13px;
 line-height: 1.3;
 font-weight: 200;
-color: black;
+color: white;
 }
 .home-button {
 position: fixed;
