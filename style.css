@@ -156,8 +156,8 @@ color: black;
 }
 .home-button {
 position: fixed;
-top: 25px;
-left: 50%;
+top: 28.5px;
+left: 70%;
 transform: translateX(-50%);
 z-index: 20;
 }
@@ -832,9 +832,9 @@ transform: translateY(-50%);
     /* Mobile navigation */
     .home-button {
         position: absolute;
-        top: 25px;
+        top: 28.5px;
         left: auto;
-        right: 75px;
+        right: 60px;
         transform: none;
     }
 
