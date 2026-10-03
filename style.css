@@ -858,9 +858,9 @@ transform: translateY(-50%);
 }
 
 .bio-image {
-    width: 52%;
+    width: 55%;
     float: right;
-    margin: 0 10 20px 20px;
+    margin: 0 15 20px 20px;
 }
 
 .bio-text {
