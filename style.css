@@ -846,8 +846,7 @@ transform: translateY(-50%);
 
     .works-page .navigation {
         padding: 25px 20px;
-    }
-        /* Smaller Bio text on mobile */
+    /* Smaller Bio text on mobile */
     .bio-text p {
         font-size: 11px;
     }
@@ -855,3 +854,12 @@ transform: translateY(-50%);
     .bio-text h1 {
         font-size: 32px;
     }
+
+    .work-group.open {
+        margin-bottom: 20px;
+    }
+
+}
+        
+    
+    
