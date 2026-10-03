@@ -867,7 +867,7 @@ transform: translateY(-50%);
     width: 100%;
     height: auto;
     display: block;
-    transform: scale(1.12) translateX(-15px);
+    transform: scale(1.12) translateX(-19px);
 }
 .bio-text {
     max-width: none;
