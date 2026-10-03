@@ -829,3 +829,20 @@ transform: translateY(-50%);
     }
 
 }
+    /* Mobile navigation */
+    .home-button {
+        position: absolute;
+        top: 25px;
+        left: auto;
+        right: 75px;
+        transform: none;
+    }
+
+    .home-button img {
+        width: 28px;
+        height: auto;
+    }
+
+    .works-page .navigation {
+        padding: 25px 20px;
+    }
