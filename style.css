@@ -214,7 +214,7 @@ height: auto;
     left: 0;
 
     color: white;
-    font-size: 18px;
+    font-size: 35px;
     font-weight: 300;
     white-space: nowrap;
 
@@ -493,4 +493,339 @@ transform: translateY(-50%);
 
 .work-group.reverse-blades.open .category-title {
     transform: translateX(60px);
+}
+/* =========================================
+   SOLID COLORS FOR WORKS PAGE
+   ========================================= */
+
+/* MAIN THUMBNAILS */
+
+
+.works-page .main-work {
+   
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   DOCUMENTARY — BLUE FAMILY
+   ========================================= */
+
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(1) {
+    background: #315C72;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(2) {
+    background: #3F7188;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(3) {
+    background: #4E879D;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(1) .work-blades .blade img {
+    visibility: hidden;
+}
+
+
+/* =========================================
+   NARRATIVE — BURGUNDY FAMILY
+   ========================================= */
+
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(1) {
+    background: #6B3440;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(2) {
+    background: #7A3E48;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(3) {
+    background: #8B4A55;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(2) .work-blades .blade img {
+    visibility: hidden;
+}
+
+
+/* =========================================
+   AD — GOLD FAMILY
+   ========================================= */
+
+.works-page .work-group:nth-child(3) .work-blades .blade:nth-child(1) {
+    background: #735728;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(3) .work-blades .blade:nth-child(2) {
+    background: #8A6A32;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(3) .work-blades .blade:nth-child(3) {
+    background: #A07D3D;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(3) .work-blades .blade img {
+    visibility: hidden;
+}
+
+
+/* =========================================
+   INSTRUCTIONAL — GREEN FAMILY
+   ========================================= */
+
+.works-page .work-group:nth-child(4) .work-blades .blade:nth-child(1) {
+    background: #345740;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(4) .work-blades .blade:nth-child(2) {
+    background: #416B50;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(4) .work-blades .blade:nth-child(3) {
+    background: #518261;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(4) .work-blades .blade img {
+    visibility: hidden;
+}
+/* =========================================
+   MOBILE WORKS PAGE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Single-column page layout */
+    body.works-page {
+        overflow-x: hidden;
+    }
+
+    .works-grid {
+        width: 92%;
+        max-width: none;
+        margin: 100px auto 80px;
+        padding-bottom: 60px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    /* Every category becomes full width */
+    .work-group,
+    .work-group.reverse-blades {
+        width: 100%;
+        grid-column: auto;
+        margin: 0;
+        transform: none;
+    }
+
+    .work-group:hover,
+    .work-group.reverse-blades:hover {
+        transform: none;
+    }
+
+    /* Large main thumbnail */
+    .work-group .main-work,
+    .work-group.open .main-work {
+        width: 100%;
+        margin: 0;
+        top: auto;
+        transform: none;
+    }
+
+    .work-group .main-work:hover {
+        transform: scale(1.02);
+    }
+
+    /* Keep the image's existing rounded corners */
+    .work-item img {
+        width: 100%;
+        border-radius: 20px;
+        clip-path: inset(0 2% 0 2% round 20px);
+    }
+
+    /* Category title becomes a simple label */
+    .category-title,
+    .work-group:nth-child(1) .category-title,
+    .work-group:nth-child(2) .category-title,
+    .work-group:nth-child(3) .category-title,
+    .work-group:nth-child(4) .category-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+
+        display: block;
+        margin-top: 14px;
+
+        text-align: center;
+        font-size: 28px;
+        line-height: 1;
+        font-weight: 500;
+
+        transform: none;
+        opacity: 1;
+    }
+
+    .work-group.open .category-title,
+    .work-group.reverse-blades.open .category-title {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* The blades now live BELOW the main thumbnail */
+    .work-blades {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: 0;
+
+        margin-top: 0;
+
+        overflow: visible;
+        z-index: 6;
+    }
+
+    /* All blades become two-column cards */
+    .blade {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 48% !important;
+
+        transition:
+            transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.5s ease;
+
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Hide blades while closed */
+    .work-group:not(.open) .blade {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Show blades when opened */
+    .work-group.open .blade {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /*
+       MOBILE BLADE POSITIONS
+
+       2 columns × 5 rows
+    */
+
+    .work-group.open .blade:nth-child(1) {
+        transform: translate(0, 0) !important;
+    }
+
+    .work-group.open .blade:nth-child(2) {
+        transform: translate(108%, 0) !important;
+    }
+
+    .work-group.open .blade:nth-child(3) {
+        transform: translate(0, 108%) !important;
+    }
+
+    .work-group.open .blade:nth-child(4) {
+        transform: translate(108%, 108%) !important;
+    }
+
+    .work-group.open .blade:nth-child(5) {
+        transform: translate(0, 216%) !important;
+    }
+
+    .work-group.open .blade:nth-child(6) {
+        transform: translate(108%, 216%) !important;
+    }
+
+    .work-group.open .blade:nth-child(7) {
+        transform: translate(0, 324%) !important;
+    }
+
+    .work-group.open .blade:nth-child(8) {
+        transform: translate(108%, 324%) !important;
+    }
+
+    .work-group.open .blade:nth-child(9) {
+        transform: translate(0, 432%) !important;
+    }
+
+    .work-group.open .blade:nth-child(10) {
+        transform: translate(108%, 432%) !important;
+    }
+
+    /*
+       Give the open blade area enough vertical room
+       for all five rows.
+    */
+
+    .work-group.open .work-blades {
+        height: calc((100vw * 0.92 * 0.48 / 1.891) * 5.4);
+        margin-top: 25px;
+    }
+
+    /* Keep the solid-color blades rounded */
+    .work-group .blade {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    /* Mobile hover text isn't useful on touchscreens */
+    .hover-text {
+        display: none;
+    }
+
+    /* The title below the main thumb is unnecessary on mobile */
+    .minimized-title {
+        display: none;
+    }
+
+    /* Don't enlarge blades when a finger touches them */
+    .blade:hover {
+        width: 48% !important;
+        transform-origin: center;
+    }
+
+    /*
+       Give the main image a little breathing room
+       after opening.
+    */
+    .work-group.open {
+        margin-bottom: 20px;
+    }
+
 }
