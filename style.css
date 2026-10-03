@@ -860,13 +860,6 @@ transform: translateY(-50%);
     align-items: start;
 }
 
-.bio-image {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    margin-top: 0;
-}
-
 .bio-text {
     grid-column: 1;
     grid-row: 1;
@@ -874,12 +867,9 @@ transform: translateY(-50%);
     width: 100%;
 }
 
-.bio-text {
-    max-width: none;
-    width: 100%;
-}
-
 .bio-image {
+    grid-column: 2;
+    grid-row: 1;
     width: 100%;
     margin-top: 0;
 }
