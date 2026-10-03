@@ -856,7 +856,10 @@ transform: translateY(-50%);
 }
 /* Mobile navigation */
 @media (max-width: 700px) {
-
+.navigation .home-button {
+    display: none;
+    pointer-events: none;
+}
     .home-button {
         display: none;
     }
