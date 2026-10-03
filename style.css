@@ -864,9 +864,10 @@ transform: translateY(-50%);
 }
 
 .bio-image img {
-    width: 120%;
+    width: 100%;
     height: auto;
     display: block;
+    transform: scale(1.12);
 }
 .bio-text {
     max-width: none;
