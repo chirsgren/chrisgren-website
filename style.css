@@ -163,9 +163,10 @@ z-index: 20;
 }
 
 .home-button img {
-display: block;
-width: 28px;
-height: auto;
+    display: block;
+    width: 28px;
+    height: auto;
+    filter: invert(1);
 }
 .works-page .navigation, .works-page .home-button { position: absolute; }
 .instagram img {
