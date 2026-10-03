@@ -858,11 +858,7 @@ transform: translateY(-50%);
 @media (max-width: 700px) {
 
     .home-button {
-        position: absolute;
-        top: 28.5px;
-        left: auto;
-        right: 60px;
-        transform: none;
+        display: none;
     }
 
     .home-button img {
