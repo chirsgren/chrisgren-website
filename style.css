@@ -65,6 +65,32 @@ body {
     font-size: 17px;
 }
 
+.letterboxd {
+    position: absolute;
+    top: 65px;
+    right: 36px;
+}
+
+.letterboxd img {
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+.youtube {
+    position: fixed !important;
+    top: 100px !important;
+    right: 20px !important;
+    width: 40px;
+    height: 40px;
+    z-index: 9999 !important;
+}
+
+.youtube img {
+    width: 26px;
+    height: auto;
+    display: block;
+}
+
 /* Works page */
 body.works-page {
     background: black;
@@ -155,12 +181,8 @@ font-weight: 200;
 color: white;
 }
 .home-button {
-    position: absolute;
-    top: 28.5px;
-    left: auto;
-    right: 65px;
-    transform: none;
-    z-index: 20;
+    display: flex;
+    align-items: center;
 }
 
 .home-button img {
@@ -169,7 +191,6 @@ color: white;
     height: auto;
     filter: invert(1);
 }
-.works-page .navigation, .works-page .home-button { position: absolute; }
 .instagram img {
     width: 35px;
     height: 35px;
