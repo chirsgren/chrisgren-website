@@ -868,14 +868,17 @@ transform: translateY(-50%);
     width: 100%;
 }
 
-.bio-text p {
-    font-size: 13px;
-}
-
 .bio-text h1 {
     font-size: 20px;
+    margin: 0 0 20px;
+    clear: right;
 }
 
+.bio-text p {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
     /* Mobile Contact page */
     .contact-image {
         margin-top: 160px;
