@@ -949,7 +949,7 @@ transform: translateY(-50%);
 
     .instagram {
         position: fixed;
-        top: 21px;
+        top: 20px;
         right: 18px;
     }
 
@@ -963,4 +963,135 @@ transform: translateY(-50%);
 }
 .hover-text {
     text-align: center;
+}
+/* =========================================
+   CONTACT PAGE — FAN BLADES
+   ========================================= */
+
+.contact-image {
+    position: relative;
+}
+
+.contact-blades {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contact-blade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.contact-image > img {
+    position: relative;
+    z-index: 10;
+}
+
+/* Blue blades */
+
+.contact-blade-1 {
+    background: #315C72;
+    transform: rotate(-12deg) translate(-45px, 35px);
+    z-index: 1;
+}
+
+.contact-blade-2 {
+    background: #3F7188;
+    transform: rotate(-7deg) translate(-28px, 25px);
+    z-index: 2;
+}
+
+.contact-blade-3 {
+    background: #4E879D;
+    transform: rotate(-3deg) translate(-12px, 15px);
+    z-index: 3;
+}
+
+/* Burgundy blade */
+
+.contact-blade-4 {
+    background: #7A3E48;
+    transform: rotate(4deg) translate(12px, 15px);
+    z-index: 4;
+}
+
+/* Gold blade */
+
+.contact-blade-5 {
+    background: #8A6A32;
+    transform: rotate(9deg) translate(30px, 25px);
+    z-index: 5;
+}
+ /* CONTACT FAN — FINAL */
+
+.contact-image {
+    position: relative !important;
+}
+
+.contact-blades {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    pointer-events: none;
+}
+
+.contact-blade {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px !important;
+}
+
+.contact-blade-1 {
+    background: #315C72 !important;
+    transform: rotate(-2deg) translate(-42px, 32px) !important;
+    z-index: 1 !important;
+}
+
+.contact-blade-2 {
+    background: #3F7188 !important;
+    transform: rotate(7deg) translate(-25px, 20px) !important;
+    z-index: 2 !important;
+}
+
+.contact-blade-3 {
+    background: #4E879D !important;
+    transform: rotate(16deg) translate(-8px, 10px) !important;
+    z-index: 3 !important;
+}
+
+.contact-blade-4 {
+    background: #7A3E48 !important;
+    transform: rotate(20deg) translate(12px, 14px) !important;
+    z-index: 4 !important;
+}
+
+.contact-blade-5 {
+    background: #8A6A32 !important;
+    transform: rotate(24deg) translate(30px, 22px) !important;
+    z-index: 5 !important;
+}
+
+.contact-image > img {
+    position: relative !important;
+    z-index: 10 !important;
+}
+@media (max-width: 700px) {
+    .contact-text-box {
+        display: none;
+    }
 }
