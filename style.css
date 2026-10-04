@@ -943,13 +943,13 @@ transform: translateY(-50%);
 
     .youtube {
         position: fixed !important;
-        top: 30px !important;
+        top: 29px !important;
         right: 40px !important;
     }
 
     .instagram {
         position: fixed;
-        top: 22px;
+        top: 21px;
         right: 18px;
     }
 
