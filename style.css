@@ -496,7 +496,11 @@ body.works-page {
     overflow: hidden;
     border-radius: 20px;
 }
-
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(8) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(2) {
     background: #3F7188;
     overflow: hidden;
@@ -620,10 +624,22 @@ body.works-page {
     object-fit: cover;
 }
 /* Wings of Time — slightly zoom thumbnail */
+
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(2) img {
     transform: scale(1.26);
 }
 
+
+/* Imagine That — zoom thumbnail */
+
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(5) {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(5) img {
+    transform: scale(1.32);
+}
 /* =========================================================
    BIO PAGE
    ========================================================= */
@@ -1101,4 +1117,14 @@ body.works-page {
         margin-bottom: 20px;
     }
 
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(9) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(10) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
 }
