@@ -1095,3 +1095,55 @@ transform: translateY(-50%);
         display: none;
     }
 }
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(1) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(2) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(3) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(4) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(5) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(6) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(7) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(8) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(9) img,
+.works-page .work-group:nth-child(2) .work-blades .blade:nth-child(10) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(1) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(3) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(4) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(5) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(6) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(7) img {
+    visibility: visible !important;
+    aspect-ratio: 2060 / 1089;
+    object-fit: cover;
+}
+@media (max-width: 700px) {
+    .reverse-blades .blade:hover {
+        width: 48% !important;
+        left: 0 !important;
+        transition: none !important;
+    }
+}
