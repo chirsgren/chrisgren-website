@@ -609,6 +609,7 @@ body.works-page {
 }
 
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(1) img,
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(2) img,
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(3) img,
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(4) img,
 .works-page .work-group:nth-child(1) .work-blades .blade:nth-child(5) img,
@@ -618,7 +619,10 @@ body.works-page {
     aspect-ratio: 2060 / 1089;
     object-fit: cover;
 }
-
+/* Wings of Time — slightly zoom thumbnail */
+.works-page .work-group:nth-child(1) .work-blades .blade:nth-child(2) img {
+    transform: scale(1.26);
+}
 
 /* =========================================================
    BIO PAGE
