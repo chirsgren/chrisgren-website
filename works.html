@@ -49,8 +49,10 @@
 
     <div class="work-item main-work">
         <img src="images/doc.jpg" alt="">
-        <span class="hover-text">Documentary</span>
-        <span class="minimized-title">Documentary</span>
+<span class="hover-text">
+    <span class="click-to-open">click to open</span><br>
+    <span class="category-hover">Documentary</span>
+</span>       <span class="minimized-title">Documentary</span>
     </div>
 
     <span class="category-title">DOCUMENTARY</span>
@@ -90,7 +92,10 @@
 
     <div class="work-item main-work">
         <img src="images/narrative.jpg" alt="">
-        <span class="hover-text">Narrative</span>
+       <span class="hover-text">
+    <span class="click-to-open">click to open</span><br>
+    <span class="category-hover">Narrative</span>
+</span>
         <span class="minimized-title">Narrative</span>
     </div>
 
@@ -131,7 +136,10 @@
 
     <div class="work-item main-work">
         <img src="images/ad.jpg" alt="">
-        <span class="hover-text">Ad</span>
+        <span class="hover-text">
+    <span class="click-to-open">click to open</span><br>
+    <span class="category-hover">Ad</span>
+</span>
         <span class="minimized-title">Ad</span>
     </div>
 
@@ -172,7 +180,10 @@
 
     <div class="work-item main-work">
         <img src="images/instructional.jpg" alt="">
-        <span class="hover-text">Instructional</span>
+        <span class="hover-text">
+    <span class="click-to-open">click to open</span><br>
+    <span class="category-hover">Instructional</span>
+</span>
         <span class="minimized-title">Instructional</span>
     </div>
 
@@ -239,8 +250,8 @@ document.querySelectorAll('.work-item').forEach(item => {
         x = Math.max(minX, Math.min(x, maxX));
         y = Math.max(minY, Math.min(y, maxY));
 
-        text.style.left = `${x}px`;
-        text.style.top = `${y}px`;
+       text.style.left = `${x - 20}px`;
+text.style.top = `${y - 50}px`;
 
         const distanceLeft = x - minX;
         const distanceRight = maxX - x;
@@ -300,189 +311,194 @@ document.querySelectorAll('.work-group').forEach(group => {
 
     /* Open / close */
 
-    mainWork.addEventListener('click', function () {
+mainWork.addEventListener('click', function () {
 
-        /* Cancel any previous opening timers */
+    /* Cancel any previous opening timers */
 
-        openTimers.forEach(timer => clearTimeout(timer));
-        openTimers = [];
-
-
-        group.classList.toggle('open');
+    openTimers.forEach(timer => clearTimeout(timer));
+    openTimers = [];
 
 
-        if (group.classList.contains('open')) {
+    /* Toggle open state */
 
-            const grid = group.closest('.works-grid');
-
-            const gridLeft =
-                grid.getBoundingClientRect().left;
-
-            const groupLeft =
-                group.getBoundingClientRect().left;
-
-            const thumbWidth =
-                group.offsetWidth;
-
-            const bladeWidth =
-                thumbWidth * 0.5;
+    group.classList.toggle('open');
 
 
-            /* All blades shrink to 50% */
+    /* Change "click to open" / "click to close" */
 
-            blades.forEach(blade => {
-                blade.style.width = '50%';
-            });
+    const clickText = this.querySelector('.click-to-open');
 
-
-            /* 5 columns × 2 rows */
-
-            const columns = 5;
-
-
-            /* Horizontal positioning */
-
-            const targetRight =
-                window.innerWidth - gridLeft;
-
-            const finalBladeRight =
-                targetRight - 36;
-
-            const overlap =
-                bladeWidth * 0.10;
-
-            const horizontalStep =
-                bladeWidth - overlap;
-
-let firstX;
-let lastX;
+    if (group.classList.contains('open')) {
+        clickText.textContent = 'click to close';
+    } else {
+        clickText.textContent = 'click to open';
+    }
 
 
-/* Normal left-side spread */
+    /* OPEN */
 
-const normalLastX =
-    finalBladeRight -
-    groupLeft -
-    bladeWidth;
+    if (group.classList.contains('open')) {
 
-const normalFirstX =
-    normalLastX -
-    horizontalStep * (columns - 1);
+        const grid = group.closest('.works-grid');
 
+        const gridLeft =
+            grid.getBoundingClientRect().left;
 
-if (group.classList.contains('reverse-blades')) {
+        const groupLeft =
+            group.getBoundingClientRect().left;
 
-    /*
-       Mirror the left-side spread.
-       The minimized thumb is 71.5% of the original width,
-       so the blades need to move outward by the amount
-       removed from the thumb.
-    */
+        const thumbWidth =
+            group.offsetWidth;
 
-const shrinkAmount =
-    thumbWidth * (1 - 0.715) * 1.17;
-
-    firstX =
-        thumbWidth -
-        normalLastX -
-        bladeWidth -
-        shrinkAmount;
-
-    lastX =
-        firstX -
-        horizontalStep * (columns - 1);
-
-} else {
-
-    firstX =
-        normalFirstX;
-
-    lastX =
-        normalLastX;
-}
+        const bladeWidth =
+            thumbWidth * 0.5;
 
 
-            /* Vertical spacing */
+        /* All blades shrink to 50% */
 
-            const verticalGap =
-                group.offsetHeight * 0.55;
-
-
-            /* Position all blades */
-
-            blades.forEach((blade, index) => {
-
-                const column =
-                    index % columns;
-
-                const row =
-                    Math.floor(index / columns);
-
-                let x;
-
-if (group.classList.contains('reverse-blades')) {
-
-    x =
-        firstX -
-        horizontalStep * column;
-
-} else {
-
-    x =
-        firstX +
-        horizontalStep * column;
-}
-
-                const y =
-                    verticalGap * row;
-
-                blade.style.zIndex =
-                    10 - index;
+        blades.forEach(blade => {
+            blade.style.width = '50%';
+        });
 
 
-                const timer = setTimeout(() => {
+        /* 5 columns × 2 rows */
 
-                    blade.style.transform =
-                        `translate(${x}px, ${y}px)`;
+        const columns = 5;
 
-                }, index * 35);
 
-                openTimers.push(timer);
+        /* Horizontal positioning */
 
-            });
+        const targetRight =
+            window.innerWidth - gridLeft;
+
+        const finalBladeRight =
+            targetRight - 36;
+
+        const overlap =
+            bladeWidth * 0.10;
+
+        const horizontalStep =
+            bladeWidth - overlap;
+
+        let firstX;
+        let lastX;
+
+
+        /* Normal left-side spread */
+
+        const normalLastX =
+            finalBladeRight -
+            groupLeft -
+            bladeWidth;
+
+        const normalFirstX =
+            normalLastX -
+            horizontalStep * (columns - 1);
+
+
+        if (group.classList.contains('reverse-blades')) {
+
+            const shrinkAmount =
+                thumbWidth * (1 - 0.715) * 1.17;
+
+            firstX =
+                thumbWidth -
+                normalLastX -
+                bladeWidth -
+                shrinkAmount;
+
+            lastX =
+                firstX -
+                horizontalStep * (columns - 1);
 
         } else {
 
+            firstX =
+                normalFirstX;
 
-            /* Return to closed state */
+            lastX =
+                normalLastX;
+        }
 
-            /* Return to closed state */
 
-blades.forEach((blade, index) => {
+        /* Vertical spacing */
 
-    blade.style.width = '100%';
+        const verticalGap =
+            group.offsetHeight * 0.55;
 
-    if (group.classList.contains('reverse-blades')) {
 
-        blade.style.transform =
-            `translateX(-${(index + 1) * 12}px)`;
+        /* Position all blades */
+
+        blades.forEach((blade, index) => {
+
+            const column =
+                index % columns;
+
+            const row =
+                Math.floor(index / columns);
+
+            let x;
+
+            if (group.classList.contains('reverse-blades')) {
+
+                x =
+                    firstX -
+                    horizontalStep * column;
+
+            } else {
+
+                x =
+                    firstX +
+                    horizontalStep * column;
+            }
+
+            const y =
+                verticalGap * row;
+
+            blade.style.zIndex =
+                10 - index;
+
+
+            const timer = setTimeout(() => {
+
+                blade.style.transform =
+                    `translate(${x}px, ${y}px)`;
+
+            }, index * 35);
+
+            openTimers.push(timer);
+
+        });
+
 
     } else {
 
-        blade.style.transform =
-            `translateX(${(index + 1) * 12}px)`;
+
+        /* CLOSE */
+
+        blades.forEach((blade, index) => {
+
+            blade.style.width = '100%';
+
+            if (group.classList.contains('reverse-blades')) {
+
+                blade.style.transform =
+                    `translateX(-${(index + 1) * 12}px)`;
+
+            } else {
+
+                blade.style.transform =
+                    `translateX(${(index + 1) * 12}px)`;
+
+            }
+
+            blade.style.zIndex = '';
+
+        });
 
     }
 
-    blade.style.zIndex = '';
-
 });
-
-        }
-
-    });
-
-
     /* Blade hover growth */
 
     blades.forEach(blade => {
